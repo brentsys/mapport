@@ -1,18 +1,17 @@
 # mapport
 
-## Setup
-```
-$ npm install -g mapport
-```
+## Forked to be used as a micrservice with PM2
 
-## Usage
-```
-mapport sourcePort [destinationHost:]destinationPort
-```
+## Setup
+
+Just set environemt variables
+SOURCE, DEST
 
 ## Example
+
 ```
-$ mapport 9999
-$ mapport 9999 10.0.0.1:22
-$ mapport 80 www.google.com:80
+export SOURCE=9999
+export DEST="10.0.0.1:22"
+
+node index.js
 ```

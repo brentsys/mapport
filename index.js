@@ -30,8 +30,11 @@ if (cluster.isMaster) {
     }
   }
 
-  var destinationAddr = process.argv.pop()
-  var sourcePort = process.argv.pop()
+  //var destinationAddr = process.argv.pop()
+  //var sourcePort = process.argv.pop()
+
+  var destinationAddr = process.env.DEST
+  var sourcePort = process.env.SOURCE
 
   if (!sourcePort.match(portRegex) || !destinationAddr.match(addrRegex)) {
     console.log("Usage: mapport sourcePort [destinationHost:]destinationPort");
